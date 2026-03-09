@@ -1,0 +1,12 @@
+package com.ticketbooking.dto.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class SeatAvailabilityResponse {
+    private Long showSeatId;
+    private String seatNumber;
+    private Integer price;
+}
