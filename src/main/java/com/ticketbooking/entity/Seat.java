@@ -20,7 +20,7 @@ public class Seat {
     private String seatNumber;
 
     @Column(nullable = false)
-    private Double price;
+    private Long price;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "venue_id", nullable = false)

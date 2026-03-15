@@ -18,9 +18,9 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class SeatServiceImpl implements SeatService {
-    private SeatRepository seatRepository;
-    private VenueRepository venueRepository;
-    private ShowSeatRepository showSeatRepository;
+    private final SeatRepository seatRepository;
+    private final VenueRepository venueRepository;
+    private final ShowSeatRepository showSeatRepository;
 
     @Override
     public Seat createSeat(Long venueId, SeatRequest request){
@@ -31,6 +31,7 @@ public class SeatServiceImpl implements SeatService {
         Seat seat = Seat.builder()
                 .seatNumber(request.getSeatNumber())
                 .venue(venue)
+                .price(request.getPrice())
                 .build();
         return seatRepository.save(seat);
     }

@@ -19,10 +19,10 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ShowServiceImpl implements ShowService {
-    private ShowRepository showRepository;
-    private VenueRepository venueRepository;
-    private SeatRepository seatRepository;
-    private ShowSeatRepository showSeatRepository;
+    private final ShowRepository showRepository;
+    private final VenueRepository venueRepository;
+    private final  SeatRepository seatRepository;
+    private final ShowSeatRepository showSeatRepository;
 
     @Override
     public Show createShow(Long venueId, ShowRequest request){
